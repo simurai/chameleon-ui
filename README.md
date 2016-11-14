@@ -1,6 +1,8 @@
-## One dark UI theme [![Build Status](https://travis-ci.org/atom/one-dark-ui.svg?branch=master)](https://travis-ci.org/atom/one-dark-ui)
+## Chameleon UI theme
 
-A dark UI theme that adjusts to most Syntax themes.
+A UI theme with shifting colors.
+
+> Warning: Only use this together with this Chameleon Syntax theme.
 
 ![one-dark-ui](https://cloud.githubusercontent.com/assets/378023/6979859/96e416e8-da24-11e4-995c-00dcd84c276d.png)
 

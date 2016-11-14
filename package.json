@@ -1,21 +1,18 @@
 {
-  "name": "one-dark-ui",
+  "name": "chameleon-ui",
   "theme": "ui",
   "version": "1.8.2",
-  "description": "Atom One dark UI theme",
+  "description": "A UI theme with shifting colors",
   "keywords": [
     "dark",
     "adaptive",
     "ui"
   ],
   "license": "MIT",
-  "repository": "https://github.com/atom/one-dark-ui",
+  "repository": "https://github.com/simurai/chameleon-ui",
   "main": "lib/main",
   "engines": {
     "atom": ">0.40.0"
-  },
-  "devDependencies": {
-    "coffeelint": "^1.9.7"
   },
   "configSchema": {
     "fontSize": {
