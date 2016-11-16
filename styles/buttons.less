@@ -4,12 +4,10 @@
 
 // Mixins -----------------------
 
-.btn-default (@color, @hover-color, @selected-color, @text-color) {
+.btn(@bg-color, @text-color) {
   color: @text-color;
-  text-shadow: none;
-  border: @btn-border;
-  background-color: @color;
-  background-image: linear-gradient(lighten(@color, 2%), @color);
+  border: 1px solid @base-border-color;
+  background-color: @bg-color;
 
   &:focus {
     //.focus(); // disabled for now, since :focus styles stay even after releasing mouse.
@@ -17,46 +15,16 @@
   }
   &:focus,
   &:hover {
-    color: @text-color-highlight;
-    background-image: linear-gradient(lighten(@hover-color, 2%), @hover-color);
+    color: @text-color;
+    background-color: @bg-color;
+    background-image: linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,100%,.05));
   }
-  &:active {
-    background: darken(@color, 4%);
-    box-shadow: none;
-  }
+  &:active,
   &.selected {
-    background: @selected-color;
-  }
-  &.selected:focus,
-  &.selected:hover {
-    background: lighten(@selected-color, 2%);
+    background-color: @bg-color;
+    background-image: linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,0%,.1));
   }
 }
-
-.btn-variant (@color) {
-  @_text-color: contrast(@color, white, hsl(0,0%,20%), 33% );
-  .btn-default(
-    @color,
-    lighten(@color, 3%),
-    saturate(darken(@color, 12%), 20%),
-    @text-color-highlight
-  );
-  color: @_text-color;
-
-  & when (@ui-lightness > 50%) {
-    border-color: transparent; // hide border on light backgrounds
-  }
-
-  &:hover,
-  &:focus {
-    color: @_text-color;
-  }
-
-  &.icon:before {
-    color: @_text-color;
-  }
-}
-
 
 // Buttons -----------------------
 
@@ -65,27 +33,28 @@
   padding: @btn-padding;
   font-size: @ui-size;
   line-height: @ui-line-height;
+  text-shadow: none;
 }
 
 .btn,
 .btn.btn-default {
-  .btn-default(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+  .btn(@bg-10, @fg-10);
 }
 
 .btn.btn-primary {
-  .btn-variant(@accent-bg-color);
+  .btn(@ac-10, @bg-00);
 }
 .btn.btn-info {
-  .btn-variant(@background-color-info);
+  .btn(@background-color-info, white);
 }
 .btn.btn-success {
-  .btn-variant(@background-color-success);
+  .btn(@background-color-success, white);
 }
 .btn.btn-warning {
-  .btn-variant(@background-color-warning);
+  .btn(@background-color-warning, white);
 }
 .btn.btn-error {
-  .btn-variant(@background-color-error);
+  .btn(@background-color-error, white);
 }
 
 
@@ -127,23 +96,23 @@
   }
 
   // hide border on light backgrounds
-  & when (@ui-lightness > 50%) {
-    &.btn-primary:first-child,
-    &.btn-info:first-child,
-    &.btn-success:first-child,
-    &.btn-warning:first-child,
-    &.btn-error:first-child {
-      border-left-color: transparent;
-    }
-
-    &.btn-primary:last-child,
-    &.btn-info:last-child,
-    &.btn-success:last-child,
-    &.btn-warning:last-child,
-    &.btn-error:last-child {
-      border-right-color: transparent;
-    }
-  }
+  // & when (@ui-lightness > 50%) {
+  //   &.btn-primary:first-child,
+  //   &.btn-info:first-child,
+  //   &.btn-success:first-child,
+  //   &.btn-warning:first-child,
+  //   &.btn-error:first-child {
+  //     border-left-color: transparent;
+  //   }
+  //
+  //   &.btn-primary:last-child,
+  //   &.btn-info:last-child,
+  //   &.btn-success:last-child,
+  //   &.btn-warning:last-child,
+  //   &.btn-error:last-child {
+  //     border-right-color: transparent;
+  //   }
+  // }
 
   &.btn:focus {
     z-index: 1;
@@ -152,11 +121,8 @@
   &.selected,
   &.selected:first-child,
   &.selected:last-child {
-    color: @button-text-color-selected;
-    border: 1px solid @button-border-color-selected;
-  }
-  &.selected + .btn {
-    border-left-color: @button-border-color-selected;
+    color: @bg-02;
+    background: @ac-00;
   }
 }
 

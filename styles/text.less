@@ -17,10 +17,14 @@ label {
   font-weight: normal;
 }
 
+blockquote {
+  border-left-color: @bg-10;
+}
+
 pre {
   box-shadow: none;
-  color: @text-color;
-  background: @inset-panel-background-color;
+  color: @fg-00;
+  background: @bg-01;
   border-radius: @component-border-radius;
   border: none;
   margin: 0;
@@ -60,9 +64,9 @@ code {
 
 .highlight {
   .highlight-mixin();
-  font-weight: 700;
-  color: @text-color-highlight;
-  background-color: @background-color-highlight;
+  font-weight: 400;
+  color: @fg-20;
+  background-color: @bg-10;
 }
 
 .highlight-color(@name, @background-color) {

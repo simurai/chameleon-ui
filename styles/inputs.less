@@ -5,18 +5,18 @@
 
 .input-checkbox {
   &:active {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
   &:before,
   &:after {
-    background-color: @accent-text-color;
+    background-color: @bg-01;
   }
   &:checked {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
 
   &:indeterminate {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
 }
 
@@ -27,13 +27,13 @@
 
 .input-radio {
   &:before {
-    background-color: @accent-text-color;
+    background-color: @bg-01;
   }
   &:active {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
   &:checked {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
 }
 
@@ -44,7 +44,7 @@
 
 .input-range {
   &::-webkit-slider-thumb {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
 }
 
@@ -55,9 +55,18 @@
 
 .input-toggle {
   &:checked {
-    background-color: @accent-color;
+    background-color: @ac-00;
   }
   &:before {
-    background-color: @accent-text-color;
+    background-color: @bg-01;
   }
+}
+
+
+//
+// Select
+// -------------------------
+
+.input-select {
+  .btn(@bg-10, @fg-10);
 }

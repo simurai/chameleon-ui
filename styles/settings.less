@@ -23,8 +23,8 @@
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
-		background: @level-2-color;
+		border-image: linear-gradient(@bg-00 10px, @base-border-color 200px) 0 1 0 0 stretch;
+		background: @bg-00;
 
 		.btn {
 			white-space: initial;
@@ -38,18 +38,34 @@
 
 
 	}
-	.nav {
+	.nav.nav {
 		& > li > a {
 			padding: @ui-padding/2 @ui-padding;
 			line-height: @ui-line-height;
+			color: @fg-10;
+		}
+		& > li > a:hover,
+		& > li.active > a {
+			color: @fg-20;
+			background-color: @bg-10;
 		}
 	}
+
+	.text {
+		color: @fg-00;
+	}
+
+	.link {
+		color: @ac-00;
+	}
+
+
 
 
 	// Sections ------------------------------
 
 	& > .panels {
-		background-color: @level-2-color;
+		background-color: @bg-00;
 	}
 
 	.section-container {
@@ -57,6 +73,10 @@
 	}
 	.sub-section {
 		margin: @ui-padding*3 0;
+		.sub-section-heading {
+			color: @fg-10;
+			font-weight: 500;
+		}
 	}
 
 	.section,
@@ -65,14 +85,33 @@
 		padding: @ui-padding*3;
 	}
 
+	.settings-panel {
+		.setting-title {
+			color: @fg-00;
+		}
+		.setting-description {
+			color: @fg-01;
+		}
+	}
+
 	.themes-panel .control-group {
 		margin-top: @ui-padding*2;
 	}
 
+	.package-readme {
+		h1, h2, h3, h4, h5, h6 {
+			color: @fg-20;
+		}
+		blockquote {
+		  border-left-color: @bg-10;
+		}
+	}
 
 	// Titles ------------------------------
 
 	.section .section-heading {
+		color: @fg-20;
+		font-weight: 300;
 		margin-bottom: @ui-padding/1.5;
 	}
 
@@ -87,19 +126,49 @@
 
 	.package-card {
 		padding: @ui-padding;
+		color: @fg-00;
+		background-color: @bg-10;
+
+		&:hover {
+			background-color: @bg-20;
+		}
+		&.disabled {
+			background-color: inherit;
+		}
+
+		.package-name {
+			color: @fg-20;
+		}
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
 			&:before {
 				content: "\00a0"; // fixes 0 height
 			}
 		}
+
+		.meta-user .author {
+			color: @fg-01;
+		}
+	}
+
+	.package-detail .package-card:hover {
+		background-color: @bg-10;
 	}
 
 
 	// Components ------------------------------
 
+	.breadcrumb {
+		& > li a {
+			color: @fg-01;
+		}
+		& > .active a {
+			color: @fg-10;
+		}
+	}
+
 	.icon::before {
-		color: @text-color-subtle;
+		color: @fg-01;
 	}
 
 	.editor-container {
@@ -117,19 +186,15 @@
 		font-size: .75em;
 	}
 
-	.install-button {
-		.btn-variant(@accent-bg-color);
-	}
-
 	input[type="checkbox"] {
-		background-color: @background-color-selected;
+		background-color: @bg-20;
 		&:active,
 		&:checked {
-			background-color: @accent-color;
+			background-color: @ac-00;
 		}
 		&:before,
 		&:after {
-			background-color: @accent-text-color;
+			background-color: @bg-00;
 		}
 	}
 

@@ -8,6 +8,19 @@
   .input-block-item {
     padding: @ui-padding/4;
   }
+
+  .subtle-info-message.subtle-info-message {
+    color: @fg-02;
+    .highlight {
+      color: @fg-10;
+    }
+  }
+  .options-label {
+    color: @fg-00;
+    .options {
+      color: @fg-20;
+    }
+  }
 }
 
 // find-and-replace
@@ -106,6 +119,24 @@
 
 
 
+// About ---------------------------
+
+.about {
+  &-logo {
+    color: @fg-01;
+  }
+  &-credits {
+    color: @fg-01;
+  }
+  .icon-logo-github {
+    color: inherit;
+    &:hover {
+      color: @fg-20;
+    }
+  }
+}
+
+
 // Timecop ---------------------------
 
 .timecop {
@@ -137,9 +168,57 @@
 // Deprecation Cop ---------------------------
 
 .deprecation-cop {
+  background-color: @bg-00 !important;
   .deprecation-overview {
-    background-color: @level-2-color;
+    background-color: @bg-00;
     border-bottom: 1px solid @base-border-color;
+  }
+}
+
+
+// Autocomplete -------------------------------
+
+autocomplete-suggestion-list.select-list.popover-list .suggestion-description {
+  background-color: @bg-01;
+}
+
+
+// Styleguide -------------------------------
+
+.styleguide {
+  &-sections {
+    & > section {
+      background-color: @bg-01;
+      &.collapsed {
+        background-color: @bg-00;
+        .section-heading {
+          color: @fg-20;
+          &:hover {
+            color: @fg-20;
+            background-color: @bg-10;
+          }
+        }
+      }
+    }
+
+    section > h2 {
+      font-weight: 400;
+      color: @fg-10;
+    }
+  }
+
+  .section-heading.section-heading {
+    font-weight: 300;
+    color: @fg-20;
+  }
+
+  .example {
+    .example-rendered {
+      background-color: @bg-00;
+    }
+    .example-code {
+      background-color: @bg-00;
+    }
   }
 }
 
@@ -148,7 +227,7 @@
 
 .tool-bar {
   // Make it look the same as other panels
-  background-color: @level-3-color;
+  background-color: @bg-01;
   border: none;
 
   // just a single border + more spacing
@@ -165,8 +244,8 @@
 
   // only show button styles on hover
   button.tool-bar-btn {
-    background-color: @level-3-color;
+    background-color: @bg-01;
     background-image: none;
-    border-color: @level-3-color;
+    border-color: @bg-01;
   }
 }

@@ -5,7 +5,7 @@
   font-size: @ui-size;
   height: @status-bar-height;
   line-height: @status-bar-height;
-  background-color: @level-3-color;
+  background-color: @bg-01;
 
   .flexbox-repaint-hack {
     padding: 0 @status-bar-padding/2;
@@ -14,6 +14,11 @@
   .inline-block {
     margin-right: @status-bar-padding;
     vertical-align: top;
+  }
+
+  a,
+  .cursor-position a {
+    color: @fg-00;
   }
 
   .status-bar-right {

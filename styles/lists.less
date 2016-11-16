@@ -32,7 +32,7 @@
   }
 
   .generate-list-item-status-color(@text-color-added, added);
-  .generate-list-item-status-color(@text-color-ignored, ignored);
+  .generate-list-item-status-color(@fg-02, ignored);
   .generate-list-item-status-color(@text-color-modified, modified);
   .generate-list-item-status-color(@text-color-removed, removed);
   .generate-list-item-status-color(@text-color-renamed, renamed);
@@ -55,10 +55,10 @@
 &.select-list ol.list-group {
   li.two-lines {
     .secondary-line {
-      color: @text-color-subtle;
+      color: @fg-01;
     }
     &.selected .secondary-line {
-      color: fade(@text-color-highlight, 50%);
+      color: @fg-00;
       text-shadow: none;
     }
   }
@@ -66,7 +66,7 @@
   // We want to highlight the background of the list items because we dont
   // know their size.
   li.selected {
-    background-color: @background-color-selected;
+    background-color: @bg-10;
     &:before{ display: none; }
   }
 
@@ -101,7 +101,7 @@
 
 .select-list.popover-list {
   @popover-list-padding: @ui-padding/4;
-  background-color: @overlay-background-color;
+  background-color: @bg-00;
   box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
   padding: @popover-list-padding;
   border-radius: @component-border-radius;
@@ -127,7 +127,7 @@
   // For sortable lists in the settings view
   li.ui-sortable-placeholder {
     visibility: visible !important;
-    background-color: darken(@pane-item-background-color, 10%);
+    background-color: @bg-01;
   }
 }
 
@@ -139,6 +139,6 @@ li.ui-sortable-helper {
   border-radius: 0;
   list-style: none;
   padding: 0 @ui-padding;
-  background: @background-color-highlight;
+  background: @bg-02;
   box-shadow: 0 0 1px @base-border-color;
 }

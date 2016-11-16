@@ -5,26 +5,26 @@ atom-text-editor[mini] {
   max-height: @ui-line-height * 5; // rows
   padding-left: @ui-padding/3;
   border-radius: @component-border-radius;
-  color: @text-color-highlight;
+  color: @fg-20;
   border: 1px solid @input-border-color;
-  background-color: @input-background-color;
+  background-color: @bg-02;
 
   .placeholder-text {
-    color: @text-color-subtle;
+    color: @fg-02;
   }
   .selection .region {
-    background-color: @input-selection-color;
+    background-color: @bg-00;
   }
   .cursor {
-    border-color: @accent-color;
+    border-color: @ac-10;
     border-width: 2px;
   }
 
   &.is-focused {
     .focus();
-    background-color: @input-background-color-focus;
+    // background-color: @bg-02;
     .selection .region {
-      background-color: @input-selection-color-focus;
+      background-color: @bg-20;
     }
   }
 }

@@ -2,7 +2,7 @@
 
 .tree-view {
   font-size: @ui-size;
-  background: @tree-view-background-color;
+  background: @bg-01;
 
   .project-root.project-root {
     &:first-child {
@@ -16,9 +16,11 @@
       line-height: @ui-tab-height;
     }
   }
-
-  .selected:before {
-    background: @tree-view-background-selected-color;
+  
+  .selected {
+    &:before {
+      background: @bg-10;
+    }
   }
 }
 
@@ -70,7 +72,7 @@
   margin-left: -@component-icon-padding;
   height: @ui-tab-height;
   width: 2px;
-  background: @accent-color;
+  background: @ac-00;
   opacity: 0;
   transition: opacity .16s;
 }

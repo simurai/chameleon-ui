@@ -3,18 +3,18 @@
 
 .text(normal) {
   font-weight: normal;
-  color: @text-color;
+  color: @fg-00;
 }
 .text(subtle) {
   font-weight: normal;
-  color: @text-color-subtle;
+  color: @fg-02;
 }
 .text(highlight) {
   font-weight: normal;
-  color: @text-color-highlight;
+  color: @fg-10;
 }
 .text(selected) {
-  .text(highlight)
+  color: @fg-20;
 }
 
 .text(info) {
@@ -32,6 +32,6 @@
 
 .focus() {
   outline: none;
-  border-color: @accent-color;
-  box-shadow: 0 0 0 1px @accent-color;
+  border-color: @ac-00;
+  box-shadow: 0 0 0 1px @ac-00;
 }
