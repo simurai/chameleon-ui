@@ -16,7 +16,7 @@
       line-height: @ui-tab-height;
     }
   }
-  
+
   .selected {
     &:before {
       background: @bg-10;
@@ -60,6 +60,21 @@
     vertical-align: top;
   }
 }
+
+
+// Git marker --------------
+
+.tree-view .file {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: .3em;
+  }
+  &.status-added:after    { content: "+"; color: @text-color-success; }
+  &.status-modified:after { content: "•"; color: @text-color-warning; }
+}
+
 
 // Active tree-view marker --------------
 
