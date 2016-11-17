@@ -41,11 +41,9 @@
   .btn(@bg-10, @fg-10);
 }
 
+.btn.btn-info,
 .btn.btn-primary {
   .btn(@ac-10, @bg-00);
-}
-.btn.btn-info {
-  .btn(@background-color-info, white);
 }
 .btn.btn-success {
   .btn(@background-color-success, white);
@@ -129,7 +127,10 @@
 
 // Button Icons -----------------------
 
-.btn.icon:before {
+.btn.icon.icon:before {
   line-height: inherit;
   vertical-align: top;
+  color: inherit;
+  opacity: .5;
+  margin-right: .4em;
 }

@@ -137,6 +137,66 @@
 }
 
 
+// Welcome ---------------------------
+
+.welcome {
+  color: @fg-00;
+  background-color: @bg-00;
+
+  a {
+    color: @ac-10;
+  }
+
+  &-logo {
+    color: @fg-10;
+    font-weight: 300;
+  }
+
+  &-header a {
+    text-decoration: none;
+  }
+
+  &-title {
+    color: @fg-00;
+    font-weight: 300;
+  }
+
+  &-card {
+    // color: @fg-00;
+    background-color: @bg-10;
+  }
+
+  &-summary {
+    color: @fg-00;
+
+    &:hover {
+      color: @fg-20;
+    }
+
+    &:before {
+      color: inherit;
+    }
+
+    details[open] & {
+      color: @fg-10;
+    }
+  }
+
+  &-highlight {
+    color: @fg-20;
+  }
+
+  &-note {
+    color: @fg-01;
+  }
+
+  &-key {
+    border: none;
+    background-color: @bg-00;
+  }
+}
+
+
 // Timecop ---------------------------
 
 .timecop {
@@ -169,9 +229,14 @@
 
 .deprecation-cop {
   background-color: @bg-00 !important;
+
   .deprecation-overview {
     background-color: @bg-00;
     border-bottom: 1px solid @base-border-color;
+  }
+
+  .deprecation-info:hover {
+    background-color: @bg-10 !important;
   }
 }
 
