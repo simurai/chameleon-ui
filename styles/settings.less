@@ -156,8 +156,9 @@
 		}
 	}
 
-	.package-detail .package-card:hover {
-		background-color: @bg-10;
+	.package-detail .package-card {
+		&:hover { background-color: @bg-10; }
+		&.disabled {  background-color: @bg-00; }
 	}
 
 
