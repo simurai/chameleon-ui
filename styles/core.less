@@ -1,10 +1,16 @@
 // Misc
 
-.preview-pane .results-view .path-match-number {
-  // show number also on selected item
-  color: inherit;
-  opacity: .6;
+.preview-pane {
+  .results-view .path-match-number {
+    // show number also on selected item
+    color: inherit;
+    opacity: .6;
+  }
+  .preview-header { background-color: @bg-00; }
+  .results-view .selected .line-number { color: @fg-10; }
 }
+
+
 
 .tool-panel.incompatible-packages {
   // incompatible-packages isn't really a tool-panel and more a whole pane

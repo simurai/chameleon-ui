@@ -85,35 +85,23 @@
 }
 
 // Colorize find-and-replace based on results
-& when (@ui-hue >= 190) and (@ui-hue <= 340) {
-  .find-and-replace {
-    &.has-no-results .find-container atom-text-editor[mini].is-focused {
+.find-and-replace {
+  &.has-no-results .find-container atom-text-editor[mini].is-focused {
+    border-color: @text-color-error;
+    box-shadow: 0 0 0 1px @text-color-error;
+    .cursor {
       border-color: @text-color-error;
-      box-shadow: 0 0 0 1px @text-color-error;
-      background-color: mix(@text-color-error, @input-background-color, 10%);
-      .selection .region {
-        background-color: mix(@text-color-error, @input-background-color, 50%);
-      }
-      .cursor {
-        border-color: @text-color-error;
-      }
     }
-
-    &.has-results .find-container atom-text-editor[mini].is-focused {
-      border-color: @text-color-success;
-      box-shadow: 0 0 0 1px @text-color-success;
-      background-color: mix(@text-color-success, @input-background-color, 10%);
-      .selection .region {
-        background-color: mix(@text-color-success, @input-background-color, 50%);
-      }
-      .cursor {
-        border-color: @text-color-success;
-      }
-    }
-
-    &.has-results    .find-container .result-counter { color: @text-color-success; }
-    &.has-no-results .find-container .result-counter { color: @text-color-error; }
   }
+  &.has-results .find-container atom-text-editor[mini].is-focused {
+    border-color: @text-color-success;
+    box-shadow: 0 0 0 1px @text-color-success;
+    .cursor {
+      border-color: @text-color-success;
+    }
+  }
+  &.has-results    .find-container .result-counter { color: @text-color-success; }
+  &.has-no-results .find-container .result-counter { color: @text-color-error; }
 }
 
 
@@ -200,30 +188,23 @@
 // Timecop ---------------------------
 
 .timecop {
+  .tool-panel,
   .timecop-panel {
     padding: @component-padding/2;
-    background-color: @level-2-color;
-  }
-
-  .tool-panel {
-    padding: @component-padding/2;
-    background-color: @level-2-color;
-  }
-
-  .inset-panel {
-    border: 1px solid @base-border-color;
+    background-color: @bg-00;
   }
 
   .panel-heading {
     .text(highlight);
     border-color: @base-border-color;
-    background-color: @level-1-color;
+    background-color: @bg-10;
   }
 
-  .list-item .inline-block {
-    line-height: 1.5;
-  }
+  .inset-panel { border: 1px solid @base-border-color; }
+  .package { color: @fg-00; }
+  .list-item .inline-block { line-height: 1.5; }
 }
+
 
 // Deprecation Cop ---------------------------
 
@@ -240,11 +221,36 @@
   }
 }
 
+// Fuzzy Finder + Command Palette -------------------------------
+
+.fuzzy-finder .list-group .character-match,
+.command-palette .list-group .character-match {
+  color: @ac-10;
+}
+
+
 
 // Autocomplete -------------------------------
 
-autocomplete-suggestion-list.select-list.popover-list .suggestion-description {
-  background-color: @bg-01;
+autocomplete-suggestion-list {
+  &.select-list.popover-list {
+    ol.list-group li {
+      color: @fg-01;
+      &.selected .word {
+        color: @fg-00;
+        .character-match {
+          color: @ac-10;
+        }
+      }
+    }
+    .suggestion-description {
+      color: @fg-01;
+      background-color: @bg-01;
+    }
+  }
+  .character-match {
+    color: @ac-10;
+  }
 }
 
 
@@ -285,6 +291,32 @@ autocomplete-suggestion-list.select-list.popover-list .suggestion-description {
       background-color: @bg-00;
     }
   }
+}
+
+.markdown-preview:not([data-use-github-style]) {
+  color: @fg-00;
+  background-color: @bg-00;
+
+  h1, h2, h3, h4, h5, h6 { color: @fg-20; }
+  strong { color: @fg-20; }
+  a { color: @ac-10; }
+  code { color: @fg-20; background-color: @bg-20; }
+  atom-text-editor { background-color: @bg-00; border: 1px solid @bg-10; }
+
+}
+
+
+// Misc ---------------------------
+
+.image-view {
+  background-color: @bg-00;
+  .image-controls {
+    background-color: @bg-00;
+  }
+}
+
+.minimap-scroll-indicator.minimap-scroll-indicator {
+  background: @bg-20;
 }
 
 

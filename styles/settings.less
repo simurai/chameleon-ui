@@ -89,9 +89,9 @@
 		.setting-title {
 			color: @fg-00;
 		}
-		.setting-description {
-			color: @fg-01;
-		}
+	}
+	.setting-description {
+		color: @fg-01;
 	}
 
 	.themes-panel .control-group {
@@ -104,6 +104,11 @@
 		}
 		blockquote {
 		  border-left-color: @bg-10;
+		}
+		code,
+		kbd {
+			color: @fg-20;
+			background-color: @bg-20;
 		}
 	}
 
@@ -167,6 +172,7 @@
 	// Components ------------------------------
 
 	.breadcrumb {
+		color: @fg-02;
 		& > li a {
 			color: @fg-01;
 		}
