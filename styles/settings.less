@@ -76,6 +76,8 @@
 		.sub-section-heading {
 			color: @fg-10;
 			font-weight: 500;
+			&.has-items::after { color: @fg-02; }
+			&.has-items:hover::after { color: @fg-10; }
 		}
 	}
 
@@ -216,6 +218,8 @@
 			background-color: @bg-00;
 		}
 	}
+
+	input[type="color"] { background-color: @bg-02; }
 
 	.search-container .btn {
 		font-size: @ui-input-size;
