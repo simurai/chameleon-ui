@@ -7,6 +7,43 @@ A color shifting UI theme for Atom.
 ![Chameleon theme](https://cloud.githubusercontent.com/assets/378023/20452572/64e8d14a-ae50-11e6-8fb4-137d2e85ea1f.gif)
 
 
+## Examples
+
+Instead of using the color picker, you can also edit your `config.cson` file.
+
+![Chameleon dark](https://cloud.githubusercontent.com/assets/378023/20453670/c7a97de2-ae6f-11e6-96bf-405f418cc90a.png)
+
+```cson
+"chameleon-syntax":
+  color:
+    ac: "#49ff94"
+    bg: "#383747"
+    fg: "#7093a8"
+```
+
+
+![Chameleon dark brown](https://cloud.githubusercontent.com/assets/378023/20453672/d05a6410-ae6f-11e6-9778-283a9ce1a13b.png)
+
+```cson
+"chameleon-syntax":
+  color:
+    ac: "#ffc465"
+    bg: "#36302d"
+    fg: "#71966c"
+```
+
+
+![Chameleon light](https://cloud.githubusercontent.com/assets/378023/20453674/d644d504-ae6f-11e6-8d38-3d3dec2c902b.png)
+
+```cson
+"chameleon-syntax":
+  color:
+    ac: "#5a5aff"
+    bg: "#fffcf9"
+    fg: "#8c847b"
+```
+
+
 ### Install
 
 This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then enter `simurai/chameleon-ui` and click on the "Themes" button. It should show a card with an "Install" button. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
