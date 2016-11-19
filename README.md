@@ -1,26 +1,16 @@
 ## Chameleon UI theme
 
-A UI theme with shifting colors.
+A color shifting UI theme for Atom.
 
-> Warning: Only use this together with this Chameleon Syntax theme.
+> Warning: This is still experimental. Only use this together with the Chameleon syntax theme (see under Install).
 
-![one-dark-ui](https://cloud.githubusercontent.com/assets/378023/6979859/96e416e8-da24-11e4-995c-00dcd84c276d.png)
-
-> The font used in the screenshots is [Fira Mono](https://github.com/mozilla/Fira). Icons by [file-icons](https://atom.io/packages/file-icons).
-
-### Combine with other Syntax themes
-
-There is a matching [Syntax theme](https://atom.io/themes/one-dark-syntax), but most other Syntax themes work fine as well.
-
-![one-dark-ui + sepia](https://cloud.githubusercontent.com/assets/378023/6979865/af2d59da-da24-11e4-8ab6-974c50534b86.png)
-> One dark + [Sepia](https://atom.io/themes/sepia-syntax)
-
-![one-dark-ui chester](https://cloud.githubusercontent.com/assets/378023/6979876/cd0fca64-da24-11e4-9006-4f7e1ff80cad.png)
-> One dark + [Chester](https://atom.io/themes/chester-atom-syntax)
+![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
 
 ### Install
 
-This theme is installed by default with Atom and can be activated by going to the __Settings > Themes__ section and selecting "One Dark" from the __UI Themes__ drop-down menu.
+This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then type `simurai/chameleon-ui` and hit enter. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
+
+Then switch to the Themes tap and pick **Chameleon** for both, UI and Syntax.
 
 ### Settings
 
@@ -45,7 +35,7 @@ And pick a __Tab Sizing__ mode:
 It's also possible to resize only certain areas by adding the following to your `styles.less` (Use the DevTools to find the right selectors):
 
 ```css
-.theme-one-dark-ui {
+.theme-chameleon-ui {
   .tab-bar { font-size: 18px; }
   .tree-view { font-size: 14px; }
   .status-bar { font-size: 12px; }
@@ -54,5 +44,13 @@ It's also possible to resize only certain areas by adding the following to your 
 
 ### FAQ
 
-__Why do the colors change when I switch Syntax themes?__
-This UI theme uses the same background color as the choosen Syntax theme. In case that Syntax theme has a light background color, it only uses its hue, but otherwise stays dark. This lets you use dark-light combos.
+__Why isn’t this theme published?__
+This theme is pretty experimental and not all packages get updated with the right colors.
+
+By convention, Atom themes have to define a list of Less variables that other packages will use to make their package look consistent with the rest of the UI. This theme uses custom properties (CSS variables) for its colors which unfortunately aren’t compatible with Less variables.
+
+You can certainly use it, but there might be issues where certain areas are red. See next question.
+
+__I see red?__
+If you see red somewhere it means that package still needs to be overridden. Feel free to make an issue, but no guarantee that it will be fixed everywhere.
+
