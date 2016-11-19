@@ -117,6 +117,20 @@
 			color: @fg-20;
 			background-color: @bg-20;
 		}
+		table td,
+		table {
+			td,
+			th {
+				border-color: @bd;
+			}
+			tr {
+				border-color: @bd;
+				background-color: @bg-10;
+				&:nth-child(2n) {
+					background-color: @bg-20;
+				}
+			}
+		}
 	}
 
 	// Titles ------------------------------
@@ -203,6 +217,11 @@
 		height: @ui-line-height;
 		padding-top: 0;
 		padding-bottom: 0;
+	}
+
+	.table td,
+	.table th {
+		border-color: @bd;
 	}
 
 	select.form-control {
