@@ -1,16 +1,18 @@
 ## Chameleon UI theme
 
-A color shifting UI theme for Atom.
+> Warning: This is still experimental (see FAQ). Only use this theme together with the Chameleon syntax theme (see under Install).
 
-> Warning: This is still experimental. Only use this together with the Chameleon syntax theme (see under Install).
+A color shifting UI theme for Atom.
 
 ![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
 
+
 ### Install
 
-This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then type `simurai/chameleon-ui` and hit enter. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
+This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then paste `simurai/chameleon-ui` and hit enter. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
 
-Then switch to the Themes tap and pick **Chameleon** for both, UI and Syntax.
+Then switch to the "Themes" tab and pick **Chameleon** for both, UI and Syntax.
+
 
 ### Settings
 
@@ -29,6 +31,7 @@ And pick a __Tab Sizing__ mode:
 1. `Auto` (default) - In Auto mode the tabs switch based on the window size.
 2. `Minimum` - In Mimimum mode the tabs will be as small as possible.
 3. `Even` - In Even mode all tabs will be the same size.
+
 
 ### Customize
 
