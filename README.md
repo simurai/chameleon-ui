@@ -9,7 +9,7 @@ A color shifting UI theme for Atom.
 
 ### Install
 
-This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then paste `simurai/chameleon-ui` and hit enter. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
+This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then enter `simurai/chameleon-ui` and click on the "Themes" button. It should show a card with an "Install" button. Don’t forget to also install `simurai/chameleon-syntax` since they depend on each other.
 
 Then switch to the "Themes" tab and pick **Chameleon** for both, UI and Syntax.
 
