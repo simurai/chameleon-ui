@@ -196,11 +196,11 @@
 
   .panel-heading {
     .text(highlight);
-    border-color: @base-border-color;
+    border-color: @bd;
     background-color: @bg-10;
   }
 
-  .inset-panel { border: 1px solid @base-border-color; }
+  .inset-panel { border: 1px solid @bd; }
   .package { color: @fg-00; }
   .list-item .inline-block { line-height: 1.5; }
 }
@@ -213,7 +213,7 @@
 
   .deprecation-overview {
     background-color: @bg-00;
-    border-bottom: 1px solid @base-border-color;
+    border-bottom: 1px solid @bd;
   }
 
   .deprecation-info:hover {
@@ -335,6 +335,7 @@ autocomplete-suggestion-list {
   }
   &.tool-bar-vertical .tool-bar-spacer {
     border-bottom: 0 none;
+    border-color: @bd;
     margin-top: .5em;
     margin-bottom: .5em;
   }

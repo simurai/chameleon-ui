@@ -23,7 +23,7 @@
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@bg-00 10px, @base-border-color 200px) 0 1 0 0 stretch;
+		border-image: linear-gradient(@bg-00 10px, @bd 200px) 0 1 0 0 stretch;
 		background: @bg-00;
 
 		.btn {
@@ -87,6 +87,11 @@
 		padding: @ui-padding*3;
 	}
 
+	.section,
+	div > section.section.settings-panel {
+	  border-color: @bd;
+	}
+
 	.settings-panel {
 		.setting-title {
 			color: @fg-00;
@@ -134,6 +139,7 @@
 	.package-card {
 		padding: @ui-padding;
 		color: @fg-00;
+		border-color: @bd;
 		background-color: @bg-10;
 
 		&:hover {

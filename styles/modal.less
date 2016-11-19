@@ -27,7 +27,7 @@ atom-panel.modal {
 
   .select-list ol.list-group,
   &.select-list ol.list-group {
-    border: 1px solid @overlay-border-color;
+    border: 1px solid @bd;
     background-color: @bg-00;
 
     &:empty {
@@ -38,7 +38,7 @@ atom-panel.modal {
     li {
       padding: @modal-padding;
       line-height: @ui-line-height;
-      border-bottom: 1px solid @overlay-border-color;
+      border-bottom: 1px solid @bd;
 
       &:last-of-type {
         border-bottom: none;
@@ -59,7 +59,7 @@ atom-panel.modal {
 
       &.selected {
         .status.icon {
-          color: @text-color-selected;
+          color: @fg-20;
         }
       }
     }

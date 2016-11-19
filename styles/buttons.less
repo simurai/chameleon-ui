@@ -1,12 +1,12 @@
 
-@btn-border: 1px solid @button-border-color;
+@btn-border: 1px solid @bd;
 @btn-padding: 0 @ui-size/1.25;
 
 // Mixins -----------------------
 
 .btn(@bg-color, @text-color) {
   color: @text-color;
-  border: 1px solid @base-border-color;
+  border: 1px solid @bd;
   background-color: @bg-color;
 
   &:focus {
@@ -83,6 +83,8 @@
 
 .btn-group > .btn {
   z-index: 0;
+  border-color: @bd;
+  
   &:hover {
     z-index: 0;
   }
