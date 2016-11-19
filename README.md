@@ -45,6 +45,7 @@ It's also possible to resize only certain areas by adding the following to your 
 ### FAQ
 
 __Why isn’t this theme published?__
+
 This theme is pretty experimental and not all packages get updated with the right colors.
 
 By convention, Atom themes have to define a list of Less variables that other packages will use to make their package look consistent with the rest of the UI. This theme uses custom properties (CSS variables) for its colors which unfortunately aren’t compatible with Less variables.
@@ -52,5 +53,6 @@ By convention, Atom themes have to define a list of Less variables that other pa
 You can certainly use it, but there might be issues where certain areas are red. See next question.
 
 __I see red?__
+
 If you see red somewhere it means that package still needs to be overridden. Feel free to make an issue, but no guarantee that it will be fixed everywhere.
 
