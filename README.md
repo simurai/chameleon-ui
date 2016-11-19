@@ -4,7 +4,7 @@
 
 A color shifting UI theme for Atom.
 
-![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
+![Chameleon theme](https://cloud.githubusercontent.com/assets/378023/20452572/64e8d14a-ae50-11e6-8fb4-137d2e85ea1f.gif)
 
 
 ### Install
