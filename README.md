@@ -11,31 +11,27 @@ A color shifting UI theme for Atom.
 
 Instead of using the color picker, you can also edit your `config.cson` file.
 
-![Chameleon dark](https://cloud.githubusercontent.com/assets/378023/20453670/c7a97de2-ae6f-11e6-96bf-405f418cc90a.png)
+1 | 2 | 3
+--- | --- | ---
+![Chameleon dark](https://cloud.githubusercontent.com/assets/378023/20453670/c7a97de2-ae6f-11e6-96bf-405f418cc90a.png) | ![Chameleon dark brown](https://cloud.githubusercontent.com/assets/378023/20453672/d05a6410-ae6f-11e6-9778-283a9ce1a13b.png) | ![Chameleon light](https://cloud.githubusercontent.com/assets/378023/20453674/d644d504-ae6f-11e6-8d38-3d3dec2c902b.png)
+
 
 ```cson
+# 1
 "chameleon-syntax":
   color:
     ac: "#49ff94"
     bg: "#383747"
     fg: "#7093a8"
-```
 
-
-![Chameleon dark brown](https://cloud.githubusercontent.com/assets/378023/20453672/d05a6410-ae6f-11e6-9778-283a9ce1a13b.png)
-
-```cson
+# 2
 "chameleon-syntax":
   color:
     ac: "#ffc465"
     bg: "#36302d"
     fg: "#71966c"
-```
 
-
-![Chameleon light](https://cloud.githubusercontent.com/assets/378023/20453674/d644d504-ae6f-11e6-8d38-3d3dec2c902b.png)
-
-```cson
+# 3
 "chameleon-syntax":
   color:
     ac: "#5a5aff"
