@@ -9,22 +9,24 @@ atom-text-editor[mini] {
   border: 1px solid @bd;
   background-color: @bg-02;
 
-  .placeholder-text {
-    color: @fg-02;
-  }
-  .selection .region {
-    background-color: @bg-00;
-  }
-  .cursor {
-    border-color: @ac-10;
-    border-width: 2px;
-  }
-
-  &.is-focused {
-    .focus();
-    // background-color: @bg-02;
+  &,
+  &::shadow {
+    .placeholder-text {
+      color: @fg-02;
+    }
     .selection .region {
-      background-color: @bg-20;
+      background-color: @bg-00;
+    }
+    .cursor {
+      border-color: @ac-10;
+      border-width: 2px;
+    }
+
+    &.is-focused {
+      .focus();
+      .selection .region {
+        background-color: @bg-20;
+      }
     }
   }
 }
